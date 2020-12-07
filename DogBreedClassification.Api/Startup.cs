@@ -70,6 +70,7 @@ namespace DogBreedClassification.Api
             services.AddSingleton<IJwtHandler, JwtHandler>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IDogClassificationService, DogClassificationService>();
+            services.AddTransient<IClassificationResultsService, ClassificationResultsService>();
 
         }
 
