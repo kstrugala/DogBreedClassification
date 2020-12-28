@@ -18,7 +18,7 @@ namespace DogBreedClassification.Api.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Policy = "Admin")]
         [Route("api/ClassificationResults")]
         public async Task<IActionResult> GetAll([FromQuery] BreedQuery query)
         {
@@ -27,7 +27,7 @@ namespace DogBreedClassification.Api.Controllers
         }
 
         [HttpGet]
-        [AllowAnonymous]
+        [Authorize(Policy = "Admin")]
         [Route("api/ClassificationResults/{id}")]
         public async Task<IActionResult> GetPredictionDetails(int id)
         {
